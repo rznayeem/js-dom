@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Add your comment below</h1>
+  <section id="comment">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias reiciendis ex incidunt ullam? Tempora
+      alias perspiciatis et fugit dolor error dicta officiis exercitationem excepturi praesentium saepe reprehenderit
+      iure dolore, hic aliquam sed nemo est, ipsum molestias id. Amet consectetur aliquid suscipit quo, commodi omnis!
+      Eum veniam vitae porro id!</p>
+    <p>Eos numquam ipsum fugit voluptate maiores alias. Vitae dolorum ex aut blanditiis repellat laudantium nostrum nemo
+      facere aperiam expedita facilis, sunt laboriosam, atque consequatur aspernatur, eius illo aliquid. Ipsam ipsum
+      voluptatibus voluptate ipsa vitae fugit nihil iusto eos repellat sunt id omnis quis non, provident eum beatae
+      quasi. Tempora, quia!</p>
+    <p id="lorem">Blanditiis reiciendis excepturi autem molestiae sunt, esse dolores facilis ipsam, animi veniam et
+      perferendis
+      soluta. Necessitatibus vitae, reprehenderit cumque eum aliquid ab, rerum molestias totam accusantium quibusdam,
+      est architecto distinctio exercitationem deserunt maiores tempore. Similique odio quibusdam, dolorum aliquam
+      possimus qui excepturi totam enim ipsa eveniet alias? Et, dolor accusantium!</p>
+  </section>
+  <textarea name="" id="textarea" cols="60" rows="10"></textarea>
+  <br>
+  <button id="post">Post</button>
+  <script>
+    document.getElementById('post').addEventListener('click', function () {
+      const textArea = document.getElementById('textarea');
+      const text = textArea.value
+      const comment = document.getElementById('comment');
+      const p = document.createElement('p');
+      p.innerText = text;
+      comment.appendChild(p);
+      textArea.value = '';
+      if (text === 'lorem') {
+        const lorem = document.getElementById('lorem')
+        p.innerText = lorem.innerText;
+      }
+    })
+  </script>
+</body>
+
+</html>

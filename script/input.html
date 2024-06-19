@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="input-title">JS DOM input field</h1>
+  <input type="text" name="" id="input-field">
+  <button id="btn-update" onclick="inputField()">Submit</button>
+  <script>
+    // function inputField() {
+    //   const input = document.getElementById('btn-update');
+    //   const inputField = document.getElementById('input-field');
+    //   document.getElementById('input-title').innerText = inputField.value;
+    // }
+    document.getElementById('btn-update').addEventListener('click', function () {
+      document.getElementById('input-title').innerText = document.getElementById('input-field').value;
+      document.getElementById('input-field').value = '';
+    })
+  </script>
+</body>
+
+</html>

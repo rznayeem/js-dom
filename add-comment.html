@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Add Your Comment Bellow</h1>
+  <div id="new-comment">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae impedit hic, aliquid iste quam, aperiam animi
+      nihil iusto tempore dicta, eos praesentium atque dolore. Temporibus fugit autem cumque doloribus consectetur
+      suscipit totam sapiente quis placeat alias! Quod, alias eius, blanditiis laboriosam consequuntur dignissimos
+      repudiandae asperiores vero accusamus incidunt enim? Ducimus?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae impedit hic, aliquid iste quam, aperiam animi
+      nihil iusto tempore dicta, eos praesentium atque dolore. Temporibus fugit autem cumque doloribus consectetur
+      suscipit totam sapiente quis placeat alias! Quod, alias eius, blanditiis laboriosam consequuntur dignissimos
+      repudiandae asperiores vero accusamus incidunt enim? Ducimus?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae impedit hic, aliquid iste quam, aperiam animi
+      nihil iusto tempore dicta, eos praesentium atque dolore. Temporibus fugit autem cumque doloribus consectetur
+      suscipit totam sapiente quis placeat alias! Quod, alias eius, blanditiis laboriosam consequuntur dignissimos
+      repudiandae asperiores vero accusamus incidunt enim? Ducimus?</p>
+  </div>
+  <br>
+  <textarea name="" id="text-field" cols="75" rows="10"></textarea>
+  <br>
+  <button id="btn-post">Post</button>
+  <script>
+    document.getElementById('btn-post').addEventListener('click', function () {
+      const textField = document.getElementById('text-field');
+      const text = textField.value;
+      const newComment = document.getElementById('new-comment');
+      const p = document.createElement('p');
+      p.innerText = text;
+      newComment.appendChild(p);
+      textField.value = '';
+
+    })
+  </script>
+</body>
+
+</html>
